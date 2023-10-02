@@ -14,7 +14,10 @@ jobs:
           name: Change apt repository to mirror
           command: sudo sed -i 's|http://archive.ubuntu.com/ubuntu/|http://mirror.enzu.com/ubuntu/|g' /etc/apt/sources.list
       - run:
-          name: Change apt repository to mirror
+          name: update package
           command: sudo apt-get update
+      - run:
+          name: install libmagickwand-dev
+          command: sudo apt-get install -y libmagickwand-dev
       - node/install:
           node-version: '18.15.0'
