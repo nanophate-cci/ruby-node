@@ -10,5 +10,8 @@ jobs:
     steps:
       - checkout
       - run: echo "hollla!"
+      - run:
+          name: Change apt repository to mirror
+          command: sudo sed -i 's|http://archive.ubuntu.com/ubuntu/|http://mirror.enzu.com/ubuntu/|g' /etc/apt/sources.list
       - node/install:
-         node-version: '18.15.0'
+          node-version: '18.15.0'
