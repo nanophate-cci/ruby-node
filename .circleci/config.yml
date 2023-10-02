@@ -19,5 +19,8 @@ jobs:
       - run:
           name: install libmagickwand-dev
           command: sudo apt-get install -y libmagickwand-dev
+      - run:
+          name: install libmagickwand-dev
+          command: sudo apt-get install -y pigz
       - node/install:
           node-version: '18.15.0'
