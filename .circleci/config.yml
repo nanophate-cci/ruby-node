@@ -11,4 +11,4 @@ jobs:
       - checkout
       - run: echo "hollla!"
       - node/install:
-         node-version: '18.15.0'
+         node-version: 16.20.0
